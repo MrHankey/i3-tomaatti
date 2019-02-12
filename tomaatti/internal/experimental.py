@@ -14,7 +14,7 @@ class ScreenOverlay(object):
 	@staticmethod
 	def is_coposite_manager_running():
 		from subprocess import Popen, PIPE
-		child = Popen(['pgrep', 'xcompmgr'], stdout=PIPE)
+		child = Popen(['pgrep', 'compton'], stdout=PIPE)
 		child.communicate()
 		if 0 == child.returncode:
 			return True
